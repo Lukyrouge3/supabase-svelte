@@ -29,7 +29,13 @@
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0-alpha.20",
-		"vite": "^5.0.3"
+		"vite": "^5.0.3",
+		"@types/cookie": "^0.6.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@supabase/ssr": "^0.4.0",
+		"@supabase/supabase-js": "^2.44.3",
+		"cookie": "^0.6.0"
+	}
 }
