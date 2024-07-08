@@ -2,37 +2,36 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
+Now also powered by [`flowbite-svelte`](https://flowbite-svelte.com/) and [`supabase`](https://supabase.com/).
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/Lukyrouge3/supabase-svelte
+cd supabase-svelte
+pnpm i
+# Add your .env and your lib/supabase.ts now
+pnpm dev
 ```
 
-## Developing
+## Environment and typing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+You'll need to setup either a `.env` or simply export those variables in order for supabase to work:
+- `PUBLIC_SUPABASE_ANON_KEY`
+- `PUBLIC_SUPABASE_URL`
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+And in order to have your supabase correctly typed you need to add your `supabase.ts` (generated either via CLI or via the API docs page) into `src/lib/supabase.ts`
 
 ## Building
 
 To create a production version of your app:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `pnpm preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
